@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress'
+import {DefaultTheme, defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,7 +19,30 @@ export default defineConfig({
         lightModeSwitchTitle: "切换到浅色模式",
         returnToTopLabel: "回到顶部",
         outline: {label: "在这一页上"},
-        search: {provider: 'local'},
+        search: {
+            provider: 'local',
+            options:{
+                locales:{
+                    zh: {
+                        translations: {
+                          button: {
+                            buttonText: '搜索文档',
+                            buttonAriaLabel: '搜索文档'
+                          },
+                          modal: {
+                            noResultsText: '无法找到相关结果',
+                            resetButtonTitle: '清除查询条件',
+                            footer: {
+                              selectText: '选择',
+                              navigateText: '切换',
+                              closeText: '关闭'
+                            }
+                          }
+                        }
+                      }
+                }
+            }
+        },
         logo: '/logo.png',
         socialLinks: [
             {icon: 'github', link: 'https://github.com/MSLTeam/MSL'},
@@ -68,3 +91,6 @@ export default defineConfig({
         },
     }
 })
+
+
+

@@ -11,7 +11,7 @@ hero:
       link: https://msl.waheal.top/files/MSL.exe
     - theme: alt
       text: 使用文档
-      link: /msl/start
+      link: /start
     - theme: alt
       text: Github
       link: https://github.com/MSLTeam/MSL
